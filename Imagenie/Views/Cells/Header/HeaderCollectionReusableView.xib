@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCollectionReusableView" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView" customModule="Imagenie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWM-ZC-Be0">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guK-qC-lbA">
+                            <rect key="frame" x="10" y="19" width="59.5" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8L-Li-QQN">
+                            <rect key="frame" x="244" y="18.5" width="66" height="30"/>
+                            <state key="normal" title="See More"/>
+                            <connections>
+                                <action selector="seeMoreTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="R6V-lY-vMy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="guK-qC-lbA" firstAttribute="leading" secondItem="SWM-ZC-Be0" secondAttribute="leading" constant="10" id="2ZD-mt-Ful"/>
+                        <constraint firstItem="D8L-Li-QQN" firstAttribute="centerY" secondItem="guK-qC-lbA" secondAttribute="centerY" id="aQZ-zp-fe0"/>
+                        <constraint firstAttribute="bottom" secondItem="guK-qC-lbA" secondAttribute="bottom" constant="2" id="gV1-gQ-8v3"/>
+                        <constraint firstAttribute="trailing" secondItem="D8L-Li-QQN" secondAttribute="trailing" constant="10" id="uSG-h2-MF9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="SWM-ZC-Be0" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="Fpl-Fs-kjg"/>
+                <constraint firstItem="SWM-ZC-Be0" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="K73-FI-i0I"/>
+                <constraint firstItem="SWM-ZC-Be0" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Px6-Jb-hsW"/>
+                <constraint firstItem="SWM-ZC-Be0" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="gwM-bH-dFo"/>
+            </constraints>
+            <connections>
+                <outlet property="headerLbl" destination="guK-qC-lbA" id="ANl-s7-445"/>
+                <outlet property="seeMoreBtn" destination="D8L-Li-QQN" id="9Ig-oj-Z4E"/>
+            </connections>
+            <point key="canvasLocation" x="122" y="129"/>
+        </collectionReusableView>
+    </objects>
+</document>
